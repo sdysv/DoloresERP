@@ -37,6 +37,29 @@ namespace DoloresERP.Migrations
 
                     b.ToTable("Clients");
                 });
+
+            modelBuilder.Entity("DoloresERP.Models.User", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Nome");
+
+                    b.Property<string>("Senha");
+
+                    b.Property<string>("Sobrenome");
+
+                    b.Property<string>("Tipo");
+
+                    b.Property<string>("Usuario");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Users");
+                });
 #pragma warning restore 612, 618
         }
     }
